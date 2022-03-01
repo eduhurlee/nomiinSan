@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #655a56;
+  background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 2 * 4vw);
+}
+
+.container {
+  max-width: 120rem;
+  /* max-height: 50rem; */
+  margin: 4vw auto;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2rem 6rem 0.5rem rgba(101, 90, 86, 0.2);
+  display: grid;
+  grid-template-rows: 10rem minmax(100rem, auto);
+  grid-template-columns: 1.1fr 2fr 1.1fr;
+  grid-template-areas: "tolgoi tolgoi tolgoi" "jagsaalt medee shine" "foot foot foot";
+}
+@media only screen and (max-width: 68.75em) {
+  .container {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+.tolgoi {
+  grid-area: tolgoi;
+  background-color: #333;
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-between;
+}
+.t_i img {
+  margin-left: 4rem;
+  height: 4.5rem;
+  width: 2;
+  display: block;
+}
+
+.btn .shineBtn {
+  position: relative;
+  margin-left: 0 0;
+  padding: 1rem;
+  height: 4rem;
+  width: 10rem;
+  border-radius: 15%;
+  color: #655a56;
+  /* border: none; */
+}
+
+.btn img {
+  margin-left: 4rem;
+  height: 4.5rem;
+  width: 2;
+  display: block;
+}
+
+.jagsaalt {
+  grid-area: jagsaalt;
+  background-color: #f9f5f3;
+  border-top: 1px solid #fff;
+}
+.medeelel {
+  grid-area: medee;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.shine {
+  grid-area: shine;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  grid-area: foot;
+}
